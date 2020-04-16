@@ -1,0 +1,1597 @@
+[gd_scene load_steps=61 format=2]
+
+[ext_resource path="res://cloud-particles.shader" type="Shader" id=1]
+[ext_resource path="res://cloud-fragment.shader" type="Shader" id=2]
+[ext_resource path="res://Clouds.gd" type="Script" id=3]
+[ext_resource path="res://Cloud.gd" type="Script" id=4]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+width = 256
+height = 256
+noise = SubResource( 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 2 )
+shader_param/transmission = 1.0
+shader_param/proximity_fade_distance = 50.0
+shader_param/noise = SubResource( 2 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.5, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.203288
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="QuadMesh" id=7]
+
+[sub_resource type="ShaderMaterial" id=8]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.188938
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.59409
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=10]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.135339
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=11]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.091103
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.574601
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=13]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.154386
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=14]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.0816246
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=15]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.32519
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=16]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.243749
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=17]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.305712
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=18]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.191484
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=19]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.107694
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=20]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.537803
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=21]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.333661
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=22]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.427338
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=23]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.271858
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.621019
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=25]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.118351
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=26]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.0460159
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=27]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.174853
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=28]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.0749197
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=29]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.872667
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=30]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.159525
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=31]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.54
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=32]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.0539021
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=33]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.435674
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=34]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.161169
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=35]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.45329
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=36]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.414989
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=37]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.520103
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=38]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.292255
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=39]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.241241
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=40]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.165383
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=41]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.737051
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=42]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.113873
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=43]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.120462
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=44]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.30349
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=45]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.0552324
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=46]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.147209
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=47]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.306147
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=48]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.04425
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=49]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.0816974
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=50]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.199617
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=51]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.00708262
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=52]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.365127
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=53]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.105562
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=54]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.384107
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=55]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.740939
+shader_param/color_ramp = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=56]
+shader = ExtResource( 1 )
+shader_param/emission_box_extents = Vector3( 500, 250, 500 )
+shader_param/direction = null
+shader_param/spread = null
+shader_param/flatness = null
+shader_param/radial_accel = 7.0
+shader_param/tangent_accel = 0.0
+shader_param/scale = 1000.0
+shader_param/radial_accel_random = 1.0
+shader_param/tangent_accel_random = 1.0
+shader_param/damping_random = null
+shader_param/scale_random = null
+shader_param/hue_variation_random = null
+shader_param/anim_speed_random = null
+shader_param/anim_offset_random = null
+shader_param/color = Color( 0.8, 0.8, 0.8, 1 )
+shader_param/alpha = 0.128999
+shader_param/color_ramp = SubResource( 5 )
+
+[node name="Root" type="Spatial"]
+
+[node name="Clouds" type="Spatial" parent="."]
+script = ExtResource( 3 )
+clouds = 50
+cloud_script = ExtResource( 4 )
+area_size = Vector3( 5000, 200, 5000 )
+alpha_fade_distance = 5000.0
+move_speed = 0.5
+wind_direction = Vector3( 0.707107, 0, 0.707107 )
+cloud_size = Vector3( 500, 250, 500 )
+particle_scale = 1000.0
+color = Color( 0.8, 0.8, 0.8, 1 )
+
+[node name="Cloud" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2724.45, 64.7402, -2905.5 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 6 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud2" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2899.55, 46.1825, -2834.79 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 8 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud3" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -950.134, -31.1333, -1793.14 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 9 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud4" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2028.8, -51.3333, -3817.37 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 10 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud5" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2380.08, -93.3423, -3870.25 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 11 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud6" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 420.682, -66.7342, 2083.91 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 12 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud7" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2380.25, -71.1028, -3493.7 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 13 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud8" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2041.46, -38.9189, -4112.94 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 14 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud9" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3140.03, -97.5339, -1230.82 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 15 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud10" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1417.35, -68.4332, -3504.9 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 16 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud11" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -346.897, 56.1202, 3453.61 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 17 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud12" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2925.25, 37.5749, 2789.98 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 18 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud13" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2720.41, -30.7351, -3536.05 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 19 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud14" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 510, -54.8775, -2253.34 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 20 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud15" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2996.56, -41.9841, -1455.71 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 21 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud16" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1678.7, -60.0578, -2318.81 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 22 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud17" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3045.46, 16.8934, 1994.91 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 23 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud18" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1393.66, -14.0118, 1283.82 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 24 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud19" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1475.24, -29.1839, 4153.97 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 25 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud20" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4715.25, 71.4253, -716.591 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 26 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud21" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2921.18, 27.708, -2913.36 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 27 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud22" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2463, -91.9527, 3914.02 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 28 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud23" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 427.23, -1.89162, -472.032 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 29 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud24" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3550.43, -44.9161, -2247.74 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 30 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud25" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1555.33, 83.7329, 1692.32 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 31 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud26" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2578.47, 79.0156, -3965.19 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 32 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud27" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1853.47, 12.0129, -2127.46 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 33 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud28" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1409.44, -1.7887, -3950.24 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 34 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud29" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2001.57, 66.2857, -1860.55 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 35 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud30" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1569.81, 87.9575, -2466.56 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 36 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud31" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1194.18, -49.4067, -2080.63 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 37 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud32" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1276.28, 29.4666, -3300.42 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 38 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud33" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3495.93, 72.7879, -1471.75 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 39 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud34" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3475.22, -54.4651, -2309.67 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 40 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud35" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1294.07, -24.3973, 230.953 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 41 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud36" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3645.6, 93.7203, -2516.22 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 42 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud37" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2575.86, 42.6097, -3564.09 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 43 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud38" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3455.86, 22.7508, 429.681 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 44 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud39" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4094.04, 92.072, -2354.79 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 45 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud40" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4197.25, -25.5299, -750.844 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 46 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud41" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1467.11, -92.6332, -3142.42 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 47 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud42" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4526.28, 35.5794, 1532.32 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 48 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud43" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 785.148, 73.5203, -4523.29 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 49 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud44" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -958.745, 46.2109, -3885.1 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 50 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud45" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4398.2, 93.0226, 2300.94 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 51 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud46" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1148.05, 79.3842, -2958.42 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 52 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud47" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4051.16, 75.2063, -1892.86 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 53 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud48" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2300.2, -91.4117, -2045.43 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 54 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud49" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -926.114, -75.2099, -902.483 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 55 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="Cloud50" type="Particles" parent="Clouds"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4352.71, 37.0957, 136.305 )
+material_override = SubResource( 3 )
+amount = 32
+lifetime = 10.0
+preprocess = 10.0
+visibility_aabb = AABB( -1000, -1000, -1000, 2000, 2000, 2000 )
+process_material = SubResource( 56 )
+draw_pass_1 = SubResource( 7 )
+script = ExtResource( 4 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -1, 0, -8.74228e-08, -4.37114e-08, 0.866025, 0.5, 7.57103e-08, 0.5, -0.866025, 0, 0, 0 )
+light_color = Color( 1, 1, 0.862745, 1 )
+light_energy = 1.5
