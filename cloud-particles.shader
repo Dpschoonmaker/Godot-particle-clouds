@@ -1,3 +1,4 @@
+//just a modified version of the default ParticlesMaterial
 shader_type particles;
 uniform vec3 emission_box_extents;
 uniform vec3 direction;
